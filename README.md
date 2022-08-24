@@ -22,6 +22,14 @@ docker run --rm -it \
 
 Replace `/path/to/data` with a path to the downloaded data folder.
 
+### Alexej's command to run docker
+
+```
+docker run --rm --user alexej -it -v `pwd`:/duke-dbt -v /gpfs_projects/alexej.gossmann/BSC-DBT_data/data:/data -p 9999:9999 duke-dbt bash
+```
+
+Note user alexej was added in the Dockerfile to be able to write to the data folder.
+
 ## jupyter notebook
 
 Serve jupyter notebook from the container:
